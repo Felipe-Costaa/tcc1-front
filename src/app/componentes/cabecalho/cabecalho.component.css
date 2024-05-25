@@ -1,0 +1,11 @@
+header {
+    background-color: #201f5be1;
+}
+
+.logo {
+    text-align: center;
+}
+
+#img-logo {
+    max-width: 100px;
+}
