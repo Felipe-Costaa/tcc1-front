@@ -10,6 +10,11 @@ export class TelaFilaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.carregaFila();
+  }
+
+  carregaFila(){
+    alert('Chamei o backend para dar um get na lista de reservas')
   }
 
 }

@@ -1,3 +1,6 @@
+import { CadastroPistaComponent } from './componentes/cadastro-pista/cadastro-pista.component';
+import { TelaUsuariosComponent } from './componentes/tela-usuarios/tela-usuarios.component';
+import { TelaPistasComponent } from './componentes/tela-pistas/tela-pistas.component';
 import { CadastroReservaComponent } from './componentes/cadastro-reserva/cadastro-reserva.component';
 import { TelaFilaComponent } from './componentes/tela-fila/tela-fila.component';
 import { NgModule, Component } from '@angular/core';
@@ -22,6 +25,18 @@ const routes: Routes = [
   {
     path: 'cadastroReserva',
     component: CadastroReservaComponent
+  },
+  {
+    path: 'usuarios',
+    component: TelaUsuariosComponent
+  },
+  {
+    path: 'pistas',
+    component: TelaPistasComponent
+  },
+  {
+    path: 'cadastroPista',
+    component: CadastroPistaComponent
   }
 
 ];

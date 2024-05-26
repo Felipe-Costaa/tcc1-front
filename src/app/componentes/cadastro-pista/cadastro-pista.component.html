@@ -1,0 +1,26 @@
+<app-cabecalho></app-cabecalho>
+<div class="container">
+    <h1>Cadastrar nova pista</h1>
+    <div class="containerForm">
+        <form action="">
+            <label class="texto" for="nome_pista">Nome da pista</label>
+            <br>
+            <input class="campoInput" type="text" placeholder="Insira o nome da pista">
+            <br>
+            <label class="texto" for="pista_status">status da pista</label>
+            <br>
+            <select class="campoInput" type="select" placeholder="Insira o WhatsApp do cliente">
+              <option disabled selected>Selecione um status</option>
+              <option>Operando</option>
+              <option>Em manutenção</option>
+              <option>Parada</option>
+            </select>
+            <br>
+            <br>
+            <div class="formButtons">
+                <button class="botaoCancelar" routerLink="/fila">Cancelar</button>
+                <button class="botaoSalvar" (click)="cadastraPista()" routerLink="/cadastroPista">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

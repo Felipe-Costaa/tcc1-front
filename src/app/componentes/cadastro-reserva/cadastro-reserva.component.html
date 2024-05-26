@@ -1,1 +1,28 @@
-<p>cadastro-reserva works!</p>
+<app-cabecalho></app-cabecalho>
+<div class="container">
+    <h1>Cadastrar nova reserva</h1>
+    <div class="containerForm">
+        <form action="">
+            <label class="texto" for="nome_cliente">Nome do cliente</label>
+            <br>
+            <input class="campoInput" type="text" placeholder="Insira o nome do cliente">
+            <br>
+            <label class="texto" for="wpp_cliente">WhatsApp do cliente</label>
+            <br>
+            <input class="campoInput" type="text" placeholder="Insira o WhatsApp do cliente">
+            <br>
+            <label class="texto" for="pista">Pista para reserva</label>
+            <br>
+            <input class="campoInput" type="text" placeholder="Selecione a pista para reserva">
+            <br>
+            <label class="texto" for="data_reserva">Data e hora da reserva</label>
+            <br>
+            <input class="campoInput" type="datetime-local">
+            <br>
+            <div class="formButtons">
+                <button class="botaoCancelar" routerLink="/fila">Cancelar</button>
+                <button class="botaoSalvar" (click)="cadastraReserva()" routerLink="/fila">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -56,6 +56,26 @@ input {
     text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
 }
 
+select {
+    font-family: "Anton", sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: large;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+}
+
+option {
+    font-family: "Anton", sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: large;
+    color: #201f5be8;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+}
+
 form {
     margin-left: 50px;
 }

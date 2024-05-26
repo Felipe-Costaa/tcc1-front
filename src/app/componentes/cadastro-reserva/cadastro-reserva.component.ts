@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro-reserva',
@@ -11,5 +12,8 @@ export class CadastroReservaComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  cadastraReserva(){
+    alert('Chamei o backend pra cadastrar a reserva')
 
+  }
 }
