@@ -2,4 +2,7 @@
 <div class="fila">
     <h1>Fila</h1>
     <button routerLink="/cadastroReserva">Nova reserva</button>
+    <div *ngFor="let reserva of fila">
+        <app-card-reserva [reserva]="reserva"></app-card-reserva>
+    </div>
 </div>

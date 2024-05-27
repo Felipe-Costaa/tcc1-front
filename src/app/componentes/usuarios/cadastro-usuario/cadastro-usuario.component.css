@@ -1,0 +1,78 @@
+h1 {
+    font-size: 30px;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+}
+
+.container {
+    margin-left: 30%;
+}
+
+button {
+    height: 50px;
+    width: 150px;
+    font-size: large;
+    background-color: #ffffff;
+    font-family: "Anton", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.texto {
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+}
+
+.campoInput {
+    height: 50px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+input::placeholder {
+    font-family: "Anton", sans-serif;
+    text-align: center;
+    font-size: large;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+}
+
+input {
+    font-family: "Anton", sans-serif;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: large;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+}
+
+form {
+    margin-left: 50px;
+}
+
+.botaoCancelar {
+    margin-right: 11em;
+    background-color: rgb(211, 58, 58);
+}
+
+.botaoSalvar {
+    background-color: #DDDD27;
+}
+
+.containerForm {
+    background-color: rgb(240, 240, 240);
+    position: absolute;
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -1,0 +1,20 @@
+.card-reserva {
+    background-color: rgb(252, 255, 95);
+    margin: 20px;
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.texto {
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+}
+
+button {
+    text-align: left;
+    cursor: pointer;
+}

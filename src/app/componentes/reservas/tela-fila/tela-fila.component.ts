@@ -1,3 +1,5 @@
+import { ReservaService } from './../reserva.service';
+import { Reserva } from './../reserva';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelaFilaComponent implements OnInit {
 
-  constructor() { }
+  fila: Reserva[] = [];
+
+  constructor( private service: ReservaService) { }
 
   ngOnInit(): void {
-    this.carregaFila();
+    this.service.getAll().subscribe((fila) => {
+      this.fila = fila
+    });
   }
 
-  carregaFila(){
-    alert('Chamei o backend para dar um get na lista de reservas')
-  }
+
 
 }
