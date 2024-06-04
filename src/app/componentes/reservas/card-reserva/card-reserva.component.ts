@@ -9,7 +9,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CardReservaComponent implements OnInit {
 
 @Input() reserva: Reserva = {
-
   hora_reservada: new Date(),
   id_pista_reservada: 0,
   nome_cliente: 'Cliente de text hardcoded',

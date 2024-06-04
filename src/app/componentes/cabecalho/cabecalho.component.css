@@ -2,6 +2,12 @@ header {
     background-color: #201f5be1;
 }
 
+nav {
+    font-size: 20px;
+    font-family: "Anton", sans-serif;
+    color: #ffffff;
+}
+
 .logo {
     text-align: center;
 }
@@ -10,10 +16,60 @@ header {
     max-width: 100px;
 }
 
-nav {
-    color: rgb(255, 255, 255);
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #201f5be1;
+    padding: 10px 20px;
 }
 
-li {
-    color: rgb(255, 255, 255);
+.navbar-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsivo para dispositivos móveis */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-nav li {
+        width: 100%;
+        margin: 0;
+    }
+    .navbar-nav a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
 }

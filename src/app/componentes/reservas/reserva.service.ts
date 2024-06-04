@@ -16,4 +16,14 @@ export class ReservaService {
     return this.http.get<Reserva[]>(this.API)
   }
 
+  getById(id: number): Observable<Reserva> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Reserva>(url);
+  }
+
+  enviarMensagem(){
+    alert("Chamando o serviço para enviar mensagem")
+  }
+
+
 }

@@ -1,1 +1,19 @@
 <app-cabecalho></app-cabecalho>
+<div class="container_externo">
+    <div class="container_interno">
+        <p class="texto">Nome do cliente: {{ reserva.nome_cliente }}</p>
+
+        <div class="texto-container">
+            <p class="texto">Pista reservada: {{ reserva.id_pista_reservada }}</p>
+            <p class="texto" style="text-align: right;">Hora reservada: {{ reserva.hora_reservada }}</p>
+        </div>
+        <div class="chat">
+            <form action="">
+                <input type="text" placeholder="Fale com o cliente" class="mensagem">
+                <button class="botaoEnviar" (click)="enviarMensagem()">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>

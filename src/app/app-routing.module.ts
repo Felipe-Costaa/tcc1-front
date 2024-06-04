@@ -10,44 +10,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { TelaLoginComponent } from './componentes/tela-login/tela-login.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-
-  },
-  {
-    path: 'login',
-    component: TelaLoginComponent
-  },
-  {
-    path: 'fila',
-    component: TelaFilaComponent
-  },
-  {
-    path: 'cadastroReserva',
-    component: CadastroReservaComponent
-  },
-  {
-    path: 'usuarios',
-    component: TelaUsuariosComponent
-  },
-  {
-    path: 'pistas',
-    component: TelaPistasComponent
-  },
-  {
-    path: 'cadastroPista',
-    component: CadastroPistaComponent
-  },
-  {
-    path: 'cadastroUsuario',
-    component: CadastroUsuarioComponent
-  },
-  {
-    path: 'detalhesReserva',
-    component: DetalhesReservaComponent
-  }
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'login', component: TelaLoginComponent},
+  { path: 'fila', component: TelaFilaComponent},
+  { path: 'cadastroReserva', component: CadastroReservaComponent},
+  { path: 'usuarios', component: TelaUsuariosComponent},
+  { path: 'pistas', component: TelaPistasComponent},
+  { path: 'cadastroPista', component: CadastroPistaComponent},
+  { path: 'cadastroUsuario', component: CadastroUsuarioComponent},
+  { path: 'detalhesReserva/:id', component: DetalhesReservaComponent}
 
 ];
 
