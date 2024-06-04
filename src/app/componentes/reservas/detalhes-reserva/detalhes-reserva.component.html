@@ -9,8 +9,8 @@
         </div>
         <div class="chat">
             <form action="">
-                <input type="text" placeholder="Fale com o cliente" class="mensagem">
-                <button class="botaoEnviar" (click)="enviarMensagem()">Enviar</button>
+                <input type="text" placeholder="Fale com o cliente" class="mensagem" [(ngModel)]="message.body">
+                <button type="button" class="botaoEnviar" (click)="enviarMensagem(message)">Enviar</button>
             </form>
         </div>
     </div>

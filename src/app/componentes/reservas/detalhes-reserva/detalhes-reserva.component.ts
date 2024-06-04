@@ -1,3 +1,4 @@
+import { Message } from './../message';
 import { Reserva } from './../reserva';
 import { Component, OnInit, Input } from '@angular/core';
 import { ReservaService } from '../reserva.service';
@@ -11,6 +12,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./detalhes-reserva.component.css']
 })
 export class DetalhesReservaComponent implements OnInit {
+
+  message: Message = {
+    id_reserva: 0,
+    to: '+553599185634',
+    body: 'Teste de envio de mensagem via Aplicação',
+  }
 
   @Input() reserva: Reserva = {
     hora_reservada: new Date(),
@@ -34,8 +41,12 @@ export class DetalhesReservaComponent implements OnInit {
     });
   }
 
-  enviarMensagem(){
-    alert("mandando mensagem")
+  enviarMensagem(message: Message) {
+    console.log("Entrei no metodo enviarMensagem")
+    this.message.id_reserva = this.route.snapshot.params['id'];
+    console.log("O id da reserva é " + message.id_reserva);
+
+    this.service.enviarMensagem(message)
 
   }
 

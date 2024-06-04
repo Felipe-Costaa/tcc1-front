@@ -1,3 +1,4 @@
+import { Message } from './message';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -21,8 +22,11 @@ export class ReservaService {
     return this.http.get<Reserva>(url);
   }
 
-  enviarMensagem(){
-    alert("Chamando o serviço para enviar mensagem")
+  enviarMensagem(message: Message){
+    console.log("Entrei no service para enviar mensagem com o objeto" + message)
+    const url = "/send-message";
+    console.log("Vou fazer a requisição no endpoint " + url)
+    this.http.post(url, message)
   }
 
 
