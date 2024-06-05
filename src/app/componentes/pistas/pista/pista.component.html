@@ -7,6 +7,7 @@
     <span></span>
     <span></span>
     <div class="botoesRodape">
-        <button *ngIf="pista.id !== undefined" (click)="deletarPista(pista.id)" routerLink="/pistas">Excluir</button>
+        <button routerLink="/pistas/editarPista/{{ pista.id }}" class="botaoEditar">Editar</button>
+        <button *ngIf="pista.id !== undefined" (click)="deletarPista(pista.id)" routerLink="/pistas" class="botaoExcluir">Excluir</button>
     </div>
 </div>

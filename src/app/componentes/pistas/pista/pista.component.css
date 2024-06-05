@@ -9,19 +9,37 @@
 }
 
 .container {
-    background-color: rgb(252, 255, 95);
+    background-color: rgb(255, 255, 255);
     margin: 20px;
     padding: 20px;
     width: 600px;
     border-radius: 10px;
-    -webkit-text-stroke: 1px #201f5be8;
-    stroke: #201f5be8;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border: 5px solid #201f5b;
 }
 
-.botoesRodape {
-    text-align: right;
+button {
+    text-align: center;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    background-color: #ffffff;
+    font-family: "Anton", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botaoExcluir:hover {
+    background-color: rgb(255, 85, 85);
+}
+
+.botaoEditar:hover {
+    background-color: #DDDD27;
 }

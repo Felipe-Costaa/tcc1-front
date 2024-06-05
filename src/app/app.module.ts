@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http'; // Importa o HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -11,12 +11,13 @@ import { CardReservaComponent } from './componentes/reservas/card-reserva/card-r
 import { CadastroReservaComponent } from './componentes/reservas/cadastro-reserva/cadastro-reserva.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { TelaPistasComponent } from './componentes/pistas/tela-pistas/tela-pistas.component';
-import { TelaUsuariosComponent } from './componentes/usuarios/tela-usuarios/tela-usuarios.component';
 import { CadastroPistaComponent } from './componentes/pistas/cadastro-pista/cadastro-pista.component';
 import { CadastroUsuarioComponent } from './componentes/usuarios/cadastro-usuario/cadastro-usuario.component';
 import { FormsModule } from '@angular/forms';
 import { DetalhesReservaComponent } from './componentes/reservas/detalhes-reserva/detalhes-reserva.component';
 import { PistaComponent } from './componentes/pistas/pista/pista.component';
+import { EditarPistaComponent } from './componentes/pistas/editar-pista/editar-pista.component';
+import { ListagemUsuariosComponent } from './componentes/usuarios/listagem-usuarios/listagem-usuarios.component';
 
 
 @NgModule({
@@ -28,11 +29,12 @@ import { PistaComponent } from './componentes/pistas/pista/pista.component';
     CardReservaComponent,
     CadastroReservaComponent,
     TelaPistasComponent,
-    TelaUsuariosComponent,
     CadastroPistaComponent,
     CadastroUsuarioComponent,
     DetalhesReservaComponent,
     PistaComponent,
+    EditarPistaComponent,
+    ListagemUsuariosComponent,
   ],
   imports: [
     BrowserModule,

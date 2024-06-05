@@ -1,0 +1,25 @@
+<app-cabecalho></app-cabecalho>
+<div class="container">
+    <h1>Cadastrar nova pista</h1>
+    <div class="containerForm">
+        <form action="">
+            <label class="texto" for="nome_pista">Nome da pista</label>
+            <br>
+            <input class="campoInput" type="text" id="nome_pista" placeholder="Insira o nome da pista" [(ngModel)]="pista.nome" name="pistaNome">
+            <br>
+            <label class="texto" for="pista_status">status da pista</label>
+            <br>
+            <select class="campoInput" type="select" placeholder="Insira o WhatsApp do cliente" [(ngModel)]="pista.status" name="pistaStatus">
+              <option>Operando</option>
+              <option>Em manutenção</option>
+              <option>Parada</option>
+            </select>
+            <br>
+            <br>
+            <div class="formButtons">
+                <button class="botaoCancelar" (click)="cancelar()" routerLink="/pistas">Cancelar</button>
+                <button class="botaoSalvar" (click)="editarPista()" routerLink="/pistas">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
