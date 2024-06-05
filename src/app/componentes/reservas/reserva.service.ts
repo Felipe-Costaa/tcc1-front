@@ -26,7 +26,7 @@ export class ReservaService {
     console.log("Entrei no service para enviar mensagem com o objeto" + message)
     const url = "/send-message";
     console.log("Vou fazer a requisição no endpoint " + url)
-    this.http.post(url, message)
+    return this.http.post(url, message)
   }
 
 

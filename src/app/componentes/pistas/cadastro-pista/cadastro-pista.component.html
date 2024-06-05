@@ -5,12 +5,11 @@
         <form action="">
             <label class="texto" for="nome_pista">Nome da pista</label>
             <br>
-            <input class="campoInput" type="text" placeholder="Insira o nome da pista">
+            <input class="campoInput" type="text" id="nome_pista" placeholder="Insira o nome da pista" [(ngModel)]="pista.nome" name="pistaNome">
             <br>
             <label class="texto" for="pista_status">status da pista</label>
             <br>
-            <select class="campoInput" type="select" placeholder="Insira o WhatsApp do cliente">
-              <option disabled selected>Selecione um status</option>
+            <select class="campoInput" type="select" placeholder="Insira o WhatsApp do cliente" [(ngModel)]="pista.status" name="pistaStatus">
               <option>Operando</option>
               <option>Em manutenção</option>
               <option>Parada</option>
@@ -18,8 +17,8 @@
             <br>
             <br>
             <div class="formButtons">
-                <button class="botaoCancelar" routerLink="/fila">Cancelar</button>
-                <button class="botaoSalvar" (click)="cadastraPista()" routerLink="/cadastroPista">Salvar</button>
+                <button class="botaoCancelar" routerLink="/pistas">Cancelar</button>
+                <button class="botaoSalvar" (click)="cadastraPista(pista)" routerLink="/pistas">Salvar</button>
             </div>
         </form>
     </div>

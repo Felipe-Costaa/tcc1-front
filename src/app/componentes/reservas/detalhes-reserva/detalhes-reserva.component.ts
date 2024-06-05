@@ -46,7 +46,7 @@ export class DetalhesReservaComponent implements OnInit {
     this.message.id_reserva = this.route.snapshot.params['id'];
     console.log("O id da reserva é " + message.id_reserva);
 
-    this.service.enviarMensagem(message)
+    this.service.enviarMensagem(message).subscribe()
 
   }
 

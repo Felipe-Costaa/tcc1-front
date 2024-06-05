@@ -1,0 +1,12 @@
+<div class="container">
+    <p class="texto">Nome: {{ pista.nome }}</p>
+    <p class="texto">Status: </p>
+    <span class="texto" *ngIf="pista.status === 1">Operando</span>
+    <span class="texto" *ngIf="pista.status === 2">Em manutenção</span>
+    <span class="texto" *ngIf="pista.status === 0">Parada</span>
+    <span></span>
+    <span></span>
+    <div class="botoesRodape">
+        <button *ngIf="pista.id !== undefined" (click)="deletarPista(pista.id)" routerLink="/pistas">Excluir</button>
+    </div>
+</div>

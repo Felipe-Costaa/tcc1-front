@@ -16,6 +16,7 @@ import { CadastroPistaComponent } from './componentes/pistas/cadastro-pista/cada
 import { CadastroUsuarioComponent } from './componentes/usuarios/cadastro-usuario/cadastro-usuario.component';
 import { FormsModule } from '@angular/forms';
 import { DetalhesReservaComponent } from './componentes/reservas/detalhes-reserva/detalhes-reserva.component';
+import { PistaComponent } from './componentes/pistas/pista/pista.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { DetalhesReservaComponent } from './componentes/reservas/detalhes-reserv
     CadastroPistaComponent,
     CadastroUsuarioComponent,
     DetalhesReservaComponent,
+    PistaComponent,
   ],
   imports: [
     BrowserModule,

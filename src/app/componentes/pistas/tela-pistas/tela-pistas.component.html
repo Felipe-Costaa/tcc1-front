@@ -2,4 +2,7 @@
 <div class="fila">
     <h1>Pistas</h1>
     <button routerLink="/cadastroPista">Nova pista</button>
+    <div *ngFor="let pista of pistas">
+        <app-pista [pista]="pista"></app-pista>
+    </div>
 </div>
