@@ -4,10 +4,21 @@ h1 {
     font-weight: bold;
     color: #ffffff;
     -webkit-text-stroke: 1px #201f5be8;
+    margin-left: 8vw;
+}
+
+button {
+    margin-left: 8vw;
 }
 
 .lista-usuarios {
-    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 button {

@@ -1,6 +1,6 @@
 <app-cabecalho></app-cabecalho>
 <div class="container">
-    <h1>Cadastrar novo usuario</h1>
+    <h1>Editar usuario</h1>
     <div class="containerForm">
         <form action="">
             <label class="texto" for="nome_usuario">Nome</label>
@@ -16,7 +16,7 @@
             <input class="campoInput" id="senha" type="password" placeholder="Insira a senha do usuário" [(ngModel)]="usuario.senha" name="usuarioSenha">
             <div class="formButtons">
                 <button class="botaoCancelar" routerLink="/usuarios">Cancelar</button>
-                <button class="botaoSalvar" (click)="cadastrarUsuario(usuario)" routerLink="/usuarios">Salvar</button>
+                <button class="botaoSalvar" (click)="editarUsuario()" routerLink="/usuarios">Salvar</button>
             </div>
         </form>
     </div>

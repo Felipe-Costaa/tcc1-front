@@ -10,13 +10,10 @@ import { Pista } from '../pista';
 })
 export class TelaPistasComponent implements OnInit {
 
-  private readonly API = 'api/pistas'
-
   pistas: Pista[] = [];
 
 
   constructor(
-    private http: HttpClient,
     private service: PistasService
     ) { }
 

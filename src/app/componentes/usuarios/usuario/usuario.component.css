@@ -1,0 +1,47 @@
+.texto {
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    display: flex;
+    margin-right: 5px;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    margin: 20px auto;
+    /* Ajuste a margem para centralizar horizontalmente */
+    padding: 20px;
+    width: 80vw;
+    /* Garantir que a largura máxima não ultrapasse 80vw */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid #201f5b;
+}
+
+button {
+    text-align: center;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    font-size: large;
+    background-color: #ffffff;
+    font-family: "Anton", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+    text-shadow: -1px -1px 0 #201f5be8, 1px -1px 0 #201f5be8, -1px 1px 0 #201f5be8, 1px 1px 0 #201f5be8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.botaoExcluir:hover {
+    background-color: rgb(255, 85, 85);
+}
+
+.botaoEditar:hover {
+    background-color: #DDDD27;
+}

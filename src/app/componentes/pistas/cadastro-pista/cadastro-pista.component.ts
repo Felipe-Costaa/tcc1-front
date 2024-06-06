@@ -20,8 +20,6 @@ export class CadastroPistaComponent implements OnInit {
   }
 
   cadastraPista(pista: Pista){
-    console.log("identifiquei que o status é " + pista.status)
-
     if (this.pista.status == "Operando"){
       this.pista.status = <number>1
     }
@@ -33,5 +31,4 @@ export class CadastroPistaComponent implements OnInit {
     }
     this.service.createPista(this.pista).subscribe()
   }
-
 }

@@ -18,6 +18,8 @@ import { DetalhesReservaComponent } from './componentes/reservas/detalhes-reserv
 import { PistaComponent } from './componentes/pistas/pista/pista.component';
 import { EditarPistaComponent } from './componentes/pistas/editar-pista/editar-pista.component';
 import { ListagemUsuariosComponent } from './componentes/usuarios/listagem-usuarios/listagem-usuarios.component';
+import { UsuarioComponent } from './componentes/usuarios/usuario/usuario.component';
+import { EditarUsuarioComponent } from './componentes/usuarios/editar-usuario/editar-usuario.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { ListagemUsuariosComponent } from './componentes/usuarios/listagem-usuar
     PistaComponent,
     EditarPistaComponent,
     ListagemUsuariosComponent,
+    UsuarioComponent,
+    EditarUsuarioComponent,
   ],
   imports: [
     BrowserModule,

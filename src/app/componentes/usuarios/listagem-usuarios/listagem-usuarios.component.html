@@ -1,5 +1,8 @@
 <app-cabecalho></app-cabecalho>
+<h1>Usuarios</h1>
+<button routerLink="/cadastroUsuario">Cadastrar usuario</button>
 <div class="lista-usuarios">
-    <h1>Usuarios</h1>
-    <button routerLink="/cadastroUsuario">Cadastrar usuario</button>
+    <div *ngFor="let usuario of usuarios">
+        <app-usuario [usuario]="usuario"></app-usuario>
+    </div>
 </div>

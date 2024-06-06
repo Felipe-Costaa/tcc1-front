@@ -18,7 +18,6 @@ export class PistasService {
   }
 
   createPista(pista: Pista): Observable<Pista>{
-    console.log("estou mandando esse objeto para a requisição" + pista)
     return this.http.post<Pista>(this.API, pista)
   }
 

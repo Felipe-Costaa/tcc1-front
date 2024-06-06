@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from './../usuario.service';
+import { Usuario } from './../usuario';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroUsuarioComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private service: UsuarioService
+  ) { }
+
+  @Input() usuario: Usuario = {
+    nome: '',
+    email: '',
+    senha: '',
+  }
 
   ngOnInit(): void {
+  }
+
+  cadastrarUsuario(usuario: Usuario){
+    this.service.createUsuario(usuario).subscribe()
   }
 
 }

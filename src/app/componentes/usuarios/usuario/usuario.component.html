@@ -1,0 +1,8 @@
+<div class="container">
+    <p class="texto">Nome: {{ usuario.nome }}</p>
+    <p class="texto">e-mail: {{ usuario.email }}</p>
+    <div class="botoesRodape">
+        <button routerLink="/usuarios/editarUsuarios/{{ usuario.id }}" class="botaoEditar">Editar</button>
+        <button routerLink="/usuarios" *ngIf="usuario.id !== undefined" (click)="deletarUsuario(usuario.id)" class="botaoExcluir">Excluir</button>
+    </div>
+</div>
