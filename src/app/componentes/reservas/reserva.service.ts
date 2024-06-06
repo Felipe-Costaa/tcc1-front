@@ -10,6 +10,7 @@ import { Reserva } from './reserva';
 export class ReservaService {
 
   private readonly API = 'api/reservas'
+  private readonly APIM = 'api'
 
   constructor(private http: HttpClient) { }
 
@@ -23,9 +24,7 @@ export class ReservaService {
   }
 
   enviarMensagem(message: Message){
-    console.log("Entrei no service para enviar mensagem com o objeto" + message)
-    const url = "/send-message";
-    console.log("Vou fazer a requisição no endpoint " + url)
+    const url = `${this.APIM}/send-message`;
     return this.http.post(url, message)
   }
 
