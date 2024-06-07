@@ -25,7 +25,7 @@ export class ReservaService {
 
   enviarMensagem(message: Message){
     const url = `${this.APIM}/send-message`;
-    return this.http.post(url, message)
+    return this.http.post(url, message,{ responseType: 'text' })
   }
 
 
