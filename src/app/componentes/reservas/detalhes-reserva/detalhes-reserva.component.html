@@ -6,6 +6,10 @@
         <div class="texto-container">
             <p class="texto">Pista reservada: {{ reserva.id_pista_reservada }}</p>
             <p class="texto" style="text-align: right;">Hora reservada: {{ reserva.hora_reservada }}</p>
+            <p class="texto">Tempo restante:</p>
+            <div>
+                <p class="texto">{{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s</p>
+            </div>
         </div>
         <div class="chat">
             <form action="">

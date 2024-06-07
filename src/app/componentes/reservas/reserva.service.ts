@@ -28,5 +28,8 @@ export class ReservaService {
     return this.http.post(url, message,{ responseType: 'text' })
   }
 
+  createReserva(reserva: Reserva): Observable<Reserva>{
+    return this.http.post<Reserva>(this.API, reserva)
+  }
 
 }

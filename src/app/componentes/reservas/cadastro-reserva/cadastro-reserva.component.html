@@ -5,19 +5,22 @@
         <form action="">
             <label class="texto" for="nome_cliente">Nome do cliente</label>
             <br>
-            <input class="campoInput" type="text" placeholder="Insira o nome do cliente">
+            <input class="campoInput" type="text" placeholder="Insira o nome do cliente" [(ngModel)]="reserva.nome_cliente" name="nomeCliente">
             <br>
             <label class="texto" for="wpp_cliente">WhatsApp do cliente</label>
             <br>
-            <input class="campoInput" type="text" placeholder="Insira o WhatsApp do cliente">
+            <input class="campoInput" type="text" placeholder="Insira o WhatsApp do cliente" [(ngModel)]="reserva.wpp_cliente" name="whatsappCliente">
             <br>
             <label class="texto" for="pista">Pista para reserva</label>
             <br>
-            <input class="campoInput" type="text" placeholder="Selecione a pista para reserva">
+            <select class="campoInput" [(ngModel)]="reserva.id_pista_reservada" name="idPistaReservada">
+              <option value="" disabled selected>Selecione a pista para reserva</option>
+              <option *ngFor="let pista of pistas" [value]="pista.id">{{ pista.nome }}</option>
+            </select>
             <br>
             <label class="texto" for="data_reserva">Data e hora da reserva</label>
             <br>
-            <input class="campoInput" type="datetime-local">
+            <input class="campoInput" type="datetime-local" [(ngModel)]="reserva.hora_reservada" name="horaReservada">
             <br>
             <div class="formButtons">
                 <button class="botaoCancelar" routerLink="/fila">Cancelar</button>
