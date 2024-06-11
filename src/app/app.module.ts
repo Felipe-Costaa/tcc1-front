@@ -20,6 +20,7 @@ import { EditarPistaComponent } from './componentes/pistas/editar-pista/editar-p
 import { ListagemUsuariosComponent } from './componentes/usuarios/listagem-usuarios/listagem-usuarios.component';
 import { UsuarioComponent } from './componentes/usuarios/usuario/usuario.component';
 import { EditarUsuarioComponent } from './componentes/usuarios/editar-usuario/editar-usuario.component';
+import { DeletarReservaComponent } from './componentes/reservas/deletar-reserva/deletar-reserva.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { EditarUsuarioComponent } from './componentes/usuarios/editar-usuario/ed
     ListagemUsuariosComponent,
     UsuarioComponent,
     EditarUsuarioComponent,
+    DeletarReservaComponent,
   ],
   imports: [
     BrowserModule,
