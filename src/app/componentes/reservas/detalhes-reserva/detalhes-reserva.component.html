@@ -14,15 +14,14 @@
         </div>
         <div class="chat">
             <form action="">
-                <input type="text" placeholder="Fale com o cliente" class="mensagem" [(ngModel)]="message.body" name="messageBody">
+                <input type="text" placeholder="Fale com o cliente" class="mensagem" [(ngModel)]="message.body" [(ngModel)]="mensagem_enviada.mensagem" name="messageBody">
                 <button type="button" class="botaoEnviar" (click)="enviarMensagem(message)">Enviar</button>
             </form>
         </div>
         <div *ngIf="mensagens_enviadas && mensagens_enviadas.length > 0">
-            <h2>Mensagens Enviadas:</h2>
+            <h2 class="texto">Mensagens Enviadas:</h2>
             <ul>
-                <!-- Itera sobre cada mensagem e exibe seu conteúdo -->
-                <li *ngFor="let mensagem of mensagens_enviadas">
+                <li *ngFor="let mensagem of mensagens_enviadas" class="texto">
                     {{ mensagem.mensagem }}
                 </li>
             </ul>

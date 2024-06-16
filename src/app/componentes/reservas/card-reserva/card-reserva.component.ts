@@ -3,6 +3,7 @@ import { ReservaService } from './../reserva.service';
 import { Reserva } from './../reserva';
 import { Component, OnInit, Input } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-card-reserva',
@@ -29,9 +30,21 @@ export class CardReservaComponent implements OnInit {
 
 }
 
+message: Message = {
+  id_reserva: 0,
+  to: '+553599185634',
+  body: '',
+}
+
+mensagem_enviada: any = {
+  reserva_id: this.reserva.id,
+  mensagem: ''
+}
+
 
   constructor(
     private service: ReservaService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
@@ -63,21 +76,31 @@ export class CardReservaComponent implements OnInit {
       this.notification()
     }
     if(this.minutes == 0 && this.seconds == 0 && this.hours == 0){
-      console.log("Percebi que a reserva expirou")
-      this.reserva.status = "fechada"
       this.notification()
-      console.log(`Estou passando para o metodo edit o objeto reserva com status ${this.reserva.status}`)
       this.service.editReserva(this.reserva).subscribe()
     }
   }
 
-  notification(){
-      console.log("Metodo de notificação")
-      const messageNotification: Message = {
+  notification() {
+    console.log("Metodo de notificação")
+    const messageNotification: Message = {
       to: '+553599185634',
-      body: `Menos de ${this.minutes} para o horario reservado.`
+      body: `Menos de ${this.minutes} minutos para o horario reservado.`
     }
-    this.service.enviarMensagem(messageNotification).subscribe()
+    this.mensagem_enviada.mensagem = messageNotification.body
+
+    //this.service.enviarMensagem(messageNotification).subscribe()
+    this.enviarMensagem(messageNotification)
+  }
+
+  enviarMensagem(message: Message) {
+    this.message.id_reserva = this.route.snapshot.params['id'];
+    this.service.enviarMensagem(message).subscribe()
+    this.mensagem_enviada.reserva_id = this.reserva.id
+    this.service.createMensagemEnviada(this.mensagem_enviada).subscribe(() => {
+      this.mensagem_enviada.mensagem = ''
+    })
+
   }
 
   ngOnDestroy() {

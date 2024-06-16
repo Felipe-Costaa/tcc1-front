@@ -15,7 +15,7 @@
             <br>
             <select class="campoInput" [(ngModel)]="reserva.id_pista_reservada" name="idPistaReservada">
               <option value="" disabled selected>Selecione a pista para reserva</option>
-              <option *ngFor="let pista of pistas" [value]="pista.id">{{ pista.nome }}</option>
+              <option *ngFor="let pista of pistasDisponiveis" [value]="pista.id">{{ pista.nome }}</option>
             </select>
             <br>
             <label class="texto" for="data_reserva">Data e hora da reserva</label>

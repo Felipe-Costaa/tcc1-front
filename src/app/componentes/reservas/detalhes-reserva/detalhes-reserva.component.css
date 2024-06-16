@@ -18,6 +18,13 @@
     -webkit-text-stroke: 2px #201f5be8;
 }
 
+h2.texto {
+    font-size: 25px;
+    font-family: "Anton", sans-serif;
+    color: #ffffff;
+    -webkit-text-stroke: 1px #201f5be8;
+}
+
 .texto-container {
     display: flex;
     justify-content: space-between;
