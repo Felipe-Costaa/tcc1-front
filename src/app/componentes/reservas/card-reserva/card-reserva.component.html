@@ -1,20 +1,10 @@
 <button class="card-reserva" [routerLink]="'/detalhesReserva/' + reserva.id">
-  <p class="texto">Id da Reserva</p>
-    <p class="texto">{{ reserva.id }}</p>
-    <p class="texto">Nome do cliente</p>
-    <p class="texto">{{ reserva.nome_cliente }}</p>
-    <p class="texto">Hora reservada</p>
-    <p class="texto">{{ reserva.hora_reservada }}</p>
-    <p class="texto">Pista reservada</p>
-    <p class="texto">{{ reserva.id_pista_reservada }}</p>
-    <p class="texto">WhatsApp do cliente</p>
-    <p class="texto">{{ reserva.wpp_cliente }}</p>
-
-    <p class="texto">Tempo restante:</p>
-    <div >
-      <p class="texto">{{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s</p>
-    </div>
-    <p>id do componente pai {{ reserva.id }}</p>
+    <p class="texto">Nome do cliente: {{ reserva.nome_cliente }}</p>
+    <p class="texto">Status da reserva: {{ reserva.status }}</p>
+    <p class="texto">Hora reservada: {{ reserva.hora_reservada }}</p>
+    <p class="texto">Pista reservada: {{ reserva.id_pista_reservada }}</p>
+    <p class="texto">WhatsApp do cliente: {{ reserva.wpp_cliente }}</p>
+    <p class="texto">Tempo restante: {{ days }}d {{ hours }}h {{ minutes }}m {{ seconds }}s</p>
     <app-deletar-reserva [reserva]="reserva"></app-deletar-reserva>
 
 </button>

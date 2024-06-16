@@ -40,6 +40,8 @@ export class DetalhesReservaComponent implements OnInit {
 
   mensagens_enviadas: any;
 
+  mensagem_enviada: any;
+
   constructor(
     private service: ReservaService,
     private route: ActivatedRoute,
@@ -64,7 +66,6 @@ export class DetalhesReservaComponent implements OnInit {
   enviarMensagem(message: Message) {
     this.message.id_reserva = this.route.snapshot.params['id'];
     this.service.enviarMensagem(message).subscribe()
-
   }
 
   startCountdown() {

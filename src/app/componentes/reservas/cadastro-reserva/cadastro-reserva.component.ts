@@ -32,6 +32,7 @@ export class CadastroReservaComponent implements OnInit {
     });
   }
   cadastraReserva(){
+      this.reserva.status = 'aberta'
       this.service.createReserva(this.reserva).subscribe()
     }
   }

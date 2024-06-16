@@ -37,6 +37,11 @@ export class ReservaService {
     return this.http.post<Reserva>(this.API, reserva)
   }
 
+  editReserva(reserva: Reserva): Observable<Reserva>{
+    const url = `${this.API}/${reserva.id}`
+    return this.http.put<Reserva>(url,reserva)
+  }
+
   deleteReserva(id: number): Observable<Reserva>{
     const url = `${this.API}/${id}`
     return this.http.delete<Reserva>(url)

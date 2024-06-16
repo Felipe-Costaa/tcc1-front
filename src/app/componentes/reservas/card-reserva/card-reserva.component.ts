@@ -58,19 +58,24 @@ export class CardReservaComponent implements OnInit {
     console.log("Verificando minutos")
     console.log(`minutos: ${this.minutes}`)
 
-    if(this.minutes == 4 && this.seconds == 0){
+    if(this.minutes == 5 && this.seconds == 0){
       console.log(`Menos de ${this.minutes} minutos para reserva`)
       this.notification()
     }
-
-
+    if(this.minutes == 0 && this.seconds == 0 && this.hours == 0){
+      console.log("Percebi que a reserva expirou")
+      this.reserva.status = "fechada"
+      this.notification()
+      console.log(`Estou passando para o metodo edit o objeto reserva com status ${this.reserva.status}`)
+      this.service.editReserva(this.reserva).subscribe()
+    }
   }
 
   notification(){
       console.log("Metodo de notificação")
       const messageNotification: Message = {
       to: '+553599185634',
-      body: `Your reservation time is less than ${this.minutes} minutes away.`
+      body: `Menos de ${this.minutes} para o horario reservado.`
     }
     this.service.enviarMensagem(messageNotification).subscribe()
   }
