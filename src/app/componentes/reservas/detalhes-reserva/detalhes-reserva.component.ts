@@ -40,7 +40,10 @@ export class DetalhesReservaComponent implements OnInit {
 
   mensagens_enviadas: any;
 
-  mensagem_enviada: any;
+  mensagem_enviada: any = {
+    reserva_id: this.reserva.id,
+    mensagem: 'oi'
+  }
 
   constructor(
     private service: ReservaService,
@@ -52,7 +55,7 @@ export class DetalhesReservaComponent implements OnInit {
       const id = params['id'];
       this.service.getById(id).subscribe((reserva) => {
         this.reserva = reserva;
-        this.service.mensagensEnviadas(id).subscribe((mensagens)=>{
+        this.service.getMensagensEnviadas(id).subscribe((mensagens)=>{
           this.mensagens_enviadas = mensagens
         })
         const horaReservadaTime = new Date(this.reserva.hora_reservada).getTime();
@@ -66,7 +69,15 @@ export class DetalhesReservaComponent implements OnInit {
   enviarMensagem(message: Message) {
     this.message.id_reserva = this.route.snapshot.params['id'];
     this.service.enviarMensagem(message).subscribe()
+    this.route.params.subscribe(params => {
+      this.mensagem_enviada.reserva_id = params['id']
+    })
+    console.log(`mensagem enviada id = ${this.mensagem_enviada.id}`)
+
+    this.service.createMensagemEnviada(this.mensagem_enviada).subscribe()
+
   }
+
 
   startCountdown() {
     this.subscription = interval(1000).subscribe(() => {
