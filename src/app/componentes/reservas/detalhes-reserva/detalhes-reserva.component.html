@@ -5,6 +5,7 @@
 
         <div class="texto-container">
             <p class="texto">Pista reservada: {{ reserva.id_pista_reservada }}</p>
+            <p class="texto">Contato Cliente: {{ reserva.wpp_cliente }}</p>
             <p class="texto" style="text-align: right;">Hora reservada: {{ reserva.hora_reservada }}</p>
             <p class="texto">Tempo restante:</p>
             <div>
@@ -16,6 +17,15 @@
                 <input type="text" placeholder="Fale com o cliente" class="mensagem" [(ngModel)]="message.body" name="messageBody">
                 <button type="button" class="botaoEnviar" (click)="enviarMensagem(message)">Enviar</button>
             </form>
+        </div>
+        <div *ngIf="mensagens_enviadas && mensagens_enviadas.length > 0">
+            <h2>Mensagens Enviadas:</h2>
+            <ul>
+                <!-- Itera sobre cada mensagem e exibe seu conteúdo -->
+                <li *ngFor="let mensagem of mensagens_enviadas">
+                    {{ mensagem.mensagem }}
+                </li>
+            </ul>
         </div>
     </div>
 

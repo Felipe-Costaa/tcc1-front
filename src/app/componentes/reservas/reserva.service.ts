@@ -28,6 +28,11 @@ export class ReservaService {
     return this.http.post(url, message,{ responseType: 'text' })
   }
 
+  mensagensEnviadas(idReserva: number){
+    const id = idReserva
+    return this.http.get(`${this.APIM}/reservas/${idReserva}/mensagens`)
+  }
+
   createReserva(reserva: Reserva): Observable<Reserva>{
     return this.http.post<Reserva>(this.API, reserva)
   }

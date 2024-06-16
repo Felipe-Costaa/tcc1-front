@@ -4,5 +4,6 @@ export interface Reserva {
   id_pista_reservada: number
   nome_cliente: string
   wpp_cliente: string
+  status: string
 }
 

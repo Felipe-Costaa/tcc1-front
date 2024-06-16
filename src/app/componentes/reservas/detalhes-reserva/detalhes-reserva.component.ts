@@ -7,6 +7,7 @@ import { interval, Subscription } from 'rxjs';
 
 
 
+
 @Component({
   selector: 'app-detalhes-reserva',
   templateUrl: './detalhes-reserva.component.html',
@@ -14,9 +15,9 @@ import { interval, Subscription } from 'rxjs';
 })
 export class DetalhesReservaComponent implements OnInit {
 
-  hora_atual: Date = new Date(); // Data atual
+  hora_atual: Date = new Date();
   timeLeft: number = 0;
-  subscription: Subscription | null = null; // Inicializando como null
+  subscription: Subscription | null = null;
   days: number = 0;
   hours: number = 0;
   minutes: number = 0;
@@ -25,27 +26,33 @@ export class DetalhesReservaComponent implements OnInit {
   message: Message = {
     id_reserva: 0,
     to: '+553599185634',
-    body: 'Teste de envio de mensagem via Aplicação',
+    body: '',
   }
 
   @Input() reserva: Reserva = {
     hora_reservada: new Date(),
     id_pista_reservada: 0,
-    nome_cliente: 'Cliente de text hardcoded',
-    wpp_cliente: '35999185634'
+    nome_cliente: '',
+    wpp_cliente: '',
+    status: ''
 
   }
+
+  mensagens_enviadas: any;
 
   constructor(
     private service: ReservaService,
     private route: ActivatedRoute,
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
     this.route.params.subscribe(params => {
       const id = params['id'];
       this.service.getById(id).subscribe((reserva) => {
         this.reserva = reserva;
+        this.service.mensagensEnviadas(id).subscribe((mensagens)=>{
+          this.mensagens_enviadas = mensagens
+        })
         const horaReservadaTime = new Date(this.reserva.hora_reservada).getTime();
         const horaAtualTime = new Date(this.hora_atual).getTime();
         this.timeLeft = horaReservadaTime - horaAtualTime;
@@ -59,9 +66,6 @@ export class DetalhesReservaComponent implements OnInit {
     this.service.enviarMensagem(message).subscribe()
 
   }
-
-
-
 
   startCountdown() {
     this.subscription = interval(1000).subscribe(() => {

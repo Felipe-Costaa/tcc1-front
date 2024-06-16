@@ -15,7 +15,8 @@ export class DeletarReservaComponent implements OnInit {
     hora_reservada: new Date("2000-01-01T00:00:00Z"),
     id_pista_reservada: 0,
     nome_cliente: '',
-    wpp_cliente: ''
+    wpp_cliente: '',
+    status: ''
   }
 
   constructor(

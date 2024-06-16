@@ -24,7 +24,9 @@ export class CardReservaComponent implements OnInit {
   hora_reservada: new Date(),
   id_pista_reservada: 0,
   nome_cliente: 'Cliente de text hardcoded',
-  wpp_cliente: '35999185634'
+  wpp_cliente: '35999185634',
+  status: ''
+
 }
 
 

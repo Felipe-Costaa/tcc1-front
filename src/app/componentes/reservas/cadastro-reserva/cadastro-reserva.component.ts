@@ -1,7 +1,6 @@
 import { PistasService } from './../../pistas/pistas.service';
 import { ReservaService } from './../reserva.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { Reserva } from '../reserva';
 import { Pista } from '../../pistas/pista';
 
@@ -17,6 +16,7 @@ export class CadastroReservaComponent implements OnInit {
     id_pista_reservada: 0,
     nome_cliente: '',
     wpp_cliente: '',
+    status: ''
   }
 
   pistas: Pista[] = []
